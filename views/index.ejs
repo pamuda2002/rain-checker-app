@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will Rain Tomorrow?</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Will It Rain Tomorrow?</h1>
+        <p class="subtitle">Enter a city to find out</p>
+
+        <form action="/weather" method="POST">
+            <input type="text" name="city" placeholder="e.g., London" required>
+            <button type="submit">Check Weather</button>
+        </form>
+
+        <% if (locals.weather) { %>
+            <div class="weather-result">
+                <p><%= weather %></p>
+            </div>
+        <% } %>
+
+        <% if (locals.error) { %>
+            <div class="weather-result">
+                <p><%= error %></p>
+            </div>
+        <% } %>
+    </div>
+    
+</body>
+</html>
