@@ -55,3 +55,20 @@ button {
 button:hover{
     background-color: #2980b9;
 }
+
+.weather-result, .error-message {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 1.1em;
+}
+
+.weather-result {
+    background-color: #e8f6ff;
+    color: #2980b9;
+}
+
+.error-message {
+    background-color: #ffe8e8;
+    color: #c0392b;
+}
